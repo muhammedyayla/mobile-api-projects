@@ -5,6 +5,6 @@
 
 
 ## Project Images
-![](./assets/movie1.png)
-![](./assets/movie2.png)
-![](./assets/todo.png)
+![](assets/movie1.png)
+![](assets/movie2.png)
+![](assets/todo.png)
