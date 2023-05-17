@@ -6,9 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
-
+// import { SwiperModule, SwiperSlide } from 'swiper/angular';
 @NgModule({
   imports: [
+    // SwiperModule,
     IonicModule,
     CommonModule,
     FormsModule,

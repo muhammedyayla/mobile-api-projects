@@ -6,7 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  newItem = '';
+  newTime = '';
+  items: {name: string, time: string}[] = [];
 
-  constructor() {}
+  addItem() {
+    if (this.newItem.trim() !== '' && this.newTime.trim() !== '') {
+      this.items.push({name: this.newItem, time: this.newTime});
+      this.newItem = '';
+      this.newTime = '';
+    }
+  }
 
+  deleteItem(item: {name: string, time: string}) {
+    this.items = this.items.filter(i => i !== item);
+  }
 }
