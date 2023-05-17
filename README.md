@@ -7,4 +7,4 @@
 ## Project Images
 ![](/mobile-api-projects/src/assets/movie1.png)
 ![](/mobile-api-projects/src/assets/movie2.png)
-![](/mobile-api-projects/src/assets/todo.png)
+![](mobile-api-projects/src/assets/todo.png)
