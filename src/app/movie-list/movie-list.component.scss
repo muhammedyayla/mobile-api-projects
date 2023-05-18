@@ -1,0 +1,58 @@
+.ion-content {
+    scrollbar-width: none !important; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none !important; /* Hide scrollbar for IE and Edge */
+    overflow-y: scroll !important; /* Enable vertical scrolling */
+    -webkit-overflow-scrolling: touch !important; /* Enable smooth scrolling on iOS */
+  }
+  
+  .ion-content::-webkit-scrollbar {
+    width: 0px !important; /* Hide scrollbar for Chrome and Safari */
+  }
+  
+
+.movie-card {
+    position: relative;
+    background-color: transparent;
+    overflow: hidden; /* Ensure the overlay stays within the card */
+  }
+  
+  .movie-background {
+    position: relative;
+    height: 350px; /* Adjust the height as needed */
+    background-size: 100% 100%; /* Make the image fill the card completely */
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter 0.3s;
+  }
+  
+  /* Rest of the CSS code remains the same */  
+  
+  .movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color as desired */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .movie-card:hover .movie-overlay {
+    opacity: 1;
+  }
+  
+  .movie-overview {
+    color: white;
+    text-align: center;
+    font-size: 16px; /* Adjust the font size as desired */
+    padding: 10px;
+  }
+  
+  ion-card-content {
+    color: black; /* Adjust the text color as desired */
+  }
+  

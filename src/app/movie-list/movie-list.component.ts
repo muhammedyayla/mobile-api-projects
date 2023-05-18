@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class MovieListComponent implements OnInit {
   movies: any[] = [];
   searchTerm: string = '';
+  hoveredMovie: any = null;
 
   constructor(private http: HttpClient) {}
 
@@ -26,6 +27,20 @@ export class MovieListComponent implements OnInit {
       this.movies = data.results;
     });
   }
+
+  getClassByRate(vote_average: number) {
+    if (vote_average >= 8) {
+      return "green";
+    } else if (vote_average >= 5) {
+      return "orange";
+    } else {
+      return "red";
+    }
+  }
+
+isHovered(movie: any): boolean {
+  return movie === this.hoveredMovie;
+}
 
   searchChanged() {
     const query = this.searchTerm.trim().toLowerCase();

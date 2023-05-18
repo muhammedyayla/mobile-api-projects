@@ -1,1 +1,18 @@
+*{
+    background-color: rgb(3,56,110);
+    background-color: linear-gradient(0deg, rgba(3,56,110,1) 0%, rgba(15,0,61,1) 100%);
+}
 
+
+ion-content {
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+        -webkit-overflow-scrolling: touch;
+  
+  }

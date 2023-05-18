@@ -1,15 +1,20 @@
 <ion-content>
   <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchChanged()"></ion-searchbar>
+
   <ion-list>
-    <ion-item *ngFor="let movie of movies">
-      <ion-avatar slot="start">
-        <img [src]="'https://image.tmdb.org/t/p/w92' + movie.poster_path" />
-      </ion-avatar>
-      <ion-label>
+    <ion-card *ngFor="let movie of movies" class="movie-card">
+      <div class="movie-background" [style.backgroundImage]="'url(https://image.tmdb.org/t/p/w500' + movie.poster_path + ')'">
+        <div class="movie-overlay">
+          <p class="movie-overview" *ngIf="isHovered(movie)">{{ movie.overview }}</p>
+        </div>
+        <div class="imdb-score" [ngClass]="getClassByRate(movie.vote_average)">
+          IMDb: {{ movie.vote_average }}
+        </div>
+      </div>
+      <ion-card-content>
         <h2>{{ movie.title }}</h2>
         <h3>{{ movie.release_date }}</h3>
-        <p>{{ movie.overview }}</p>
-      </ion-label>
-    </ion-item>
+      </ion-card-content>
+    </ion-card>
   </ion-list>
 </ion-content>

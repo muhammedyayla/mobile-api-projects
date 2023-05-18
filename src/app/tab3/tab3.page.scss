@@ -1,0 +1,12 @@
+ion-content {
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+        -webkit-overflow-scrolling: touch;
+  
+  }

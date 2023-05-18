@@ -8,11 +8,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MovieDetailsDirective } from './movie-details.directive';
 
 
 @NgModule({
-  declarations: [AppComponent, MovieDetailsDirective],
+  declarations: [AppComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
